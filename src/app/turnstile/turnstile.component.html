@@ -1,0 +1,78 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="icon" aria-label="menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Testing Captcha</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="icon favorite-icon" aria-label="heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="icon" aria-label="share icon"
+    (click)="openLink()"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <section>
+  </section>
+
+  <section>
+
+    <div id="captcha"></div>
+
+    <div [formGroup]="formTurnstile">
+
+    
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Ejemplo de llamada a Turnstile
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <mat-label> Ingrese DNI: </mat-label>
+            <mat-form-field appearance="outline">
+                <input 
+                matInput 
+                placeHolder="Ingrese un DNI"
+                formControlName="dni" 
+                
+                >
+
+                <mat-error>
+
+                @if(dni?.hasError('maxlength')){
+                    Debe ingresar un valor menor a 10.
+                }
+
+                @if(dni?.hasError('minlength')){
+                    Debe ingresar un valor mayor a 6.
+                }
+
+                @if(dni?.hasError('required')){
+                    Debe ingresar un valor.
+                }
+
+                </mat-error>
+
+
+            </mat-form-field>
+            
+
+
+        </mat-card-content>
+
+        <mat-card-actions>
+
+            <button mat-flat-button
+            (click)="submit()"
+            [disabled]="!checkForm"
+            >Enviar</button>
+
+        </mat-card-actions>
+    </mat-card>
+    </div>
+
+  </section>
