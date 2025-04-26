@@ -11,7 +11,7 @@ Si el captcha no es valido, no se habilita el boton de submit. Este proyecto es 
 Agradecimientos
 ----------------
 
-Este proyecto utiliza alguna de las ideas de ngx-turnstile[ https://github.com/verto-health/ngx-turnstile], que ha sido de gran utilidad. Para lograr la interación entre Angular y Javascript. Puedes utilizar el componente ngx-turnstile si quieres evitar las configuraciones y llamadas directas de javascript.
+Este proyecto utiliza alguna de las ideas de [ngx-turnstile](https://github.com/verto-health/ngx-turnstile), que ha sido de gran utilidad. Para lograr la interación entre Angular y Javascript. Puedes utilizar el componente ngx-turnstile si quieres evitar las configuraciones y llamadas directas de javascript.
 
 Documentación de Cloudflare Turnstile
 --------------------------------------
