@@ -1,59 +1,19 @@
 # NgmTurnstile
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
 
-## Development server
+Este proyecto es una implementación en [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9. Para incorporar el uso de Cloudflare turnstile . Se incluye la invocación de un backend en [Node.js](https://github.com/jorge-alvarado-revata/ex-captcha-turnstile-validate) para realizar la validación de token de respuesta una vez que se carga el widget. La validación se realiza usando la llave privada.
 
-To start a local development server, run:
+Incluye unas adaptaciones propias de angular para realizar la carga de la función callback de turnstile.
 
-```bash
-ng serve
-```
+Si el captcha no es valido, no se habilita el boton de submit. Este proyecto es util para evitar reintentos automaticos de registro. De acuerdo a la selección de la versión de registro de la clave publica se mostrara el respectivo challenge de captcha.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+Agradecimientos
+----------------
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Este proyecto utiliza alguna de las ideas de ngx-turnstile[ https://github.com/verto-health/ngx-turnstile], que ha sido de gran utilidad. Para lograr la interación entre Angular y Javascript. Puedes utilizar el componente ngx-turnstile si quieres evitar las configuraciones y llamadas directas de javascript.
 
-```bash
-ng generate component component-name
-```
+Documentación de Cloudflare Turnstile
+--------------------------------------
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Puedes revisar la documentación de Cloudflare Turnstile en [get started](https://developers.cloudflare.com/turnstile/get-started/)
